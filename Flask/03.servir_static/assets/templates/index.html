@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servir les static </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ title }}</h1>
+
+        <img src="{{ url_for('static', filename='img/image_grand.jpg') }}" alt="image" 
+            srcset="{{ url_for('static', filename='img/image_moyen.jpg') }} 1366w,
+            {{ url_for('static', filename='img/image_petit.jpg') }} 854w,
+            {{ url_for('static', filename='img/image_tel.jpg') }} 320w
+        ">
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
