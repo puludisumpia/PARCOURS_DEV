@@ -1,7 +1,7 @@
 """
     Bien demarrer avec flask
     
-    1.Les Templates
+    2.Les Templates
 
     un template = fichier HTML + code python
 
@@ -13,15 +13,15 @@ app = Flask(__name__, template_folder="assets/templates")
 
 @app.route("/")
 def index():
-    return "Hello World"
+    return render_template("index.html", title="Bienvenu")
 
 @app.route("/apropos/")
 def apropos():
-    return "Qui suis-je?"
+    return render_template("apropos.html", title ="Qui suis-je?")
 
 @app.route("/contact/")
 def contact():
-    return "Me contacter"
+    return render_template("contact.html", title="Me contacter")
 
 
 if __name__ == "__main__":
