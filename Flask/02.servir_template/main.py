@@ -5,7 +5,10 @@
 
     un template = fichier HTML + code python
 
-    On importe render_template depuis flask 
+    On importe render_template depuis flask et
+    on definit le lien vers le dossier templates
+    via la variable "template_folder" dans l'initialisation
+    de l'app comme ceci: app = Flask(__name__, template_folder="assets/templates")
 
 """
 
