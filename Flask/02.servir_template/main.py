@@ -5,6 +5,8 @@
 
     un template = fichier HTML + code python
 
+    On importe render_template depuis flask 
+
 """
 
 from flask import Flask, render_template
